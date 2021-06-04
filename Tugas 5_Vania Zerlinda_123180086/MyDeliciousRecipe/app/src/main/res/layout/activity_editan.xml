@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".EditanActivity"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="EDIT DATA"
+        android:textColor="@color/black"
+        android:fontFamily="serif-monospace"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+        <TextView
+            android:id="@+id/t_nama"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="top"
+            android:text="Nama Makanan"
+            android:textColor="#D9000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edit_nama"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/t_nama"
+            android:hint="Apa yang akan dimasak?"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/t_lama"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/t_nama"
+            android:gravity="top"
+            android:text="Lama Memasak"
+            android:textColor="#D9000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/edit_lama"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/t_lama"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:hint="berapa waktu yang dibutuhkan untuk memasak?"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/t_porsi"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/edit_lama"
+            android:gravity="top"
+            android:text="Porsi Makanan"
+            android:layout_marginTop="2dp"
+            android:textColor="#D9000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/edit_porsi"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/t_porsi"
+            android:layout_marginLeft="20dp"
+            android:hint="Untuk berapa porsi?"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/t_bahan"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:layout_below="@id/edit_porsi"
+            android:layout_marginTop="2dp"
+            android:gravity="top"
+            android:text="Bahan-bahan"
+            android:textColor="#D9000000"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/edit_bahan"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/t_bahan"
+            android:hint="Apa saja yang dibutuhkan?"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/t_langkah"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/edit_bahan"
+            android:textStyle="bold"
+            android:gravity="top"
+            android:text="Cara Memasak"
+            android:textColor="#D9000000"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/edit_langkah"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/t_langkah"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:hint="Bagaimana cara membuatnya?"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="36dp"
+        android:padding="12dp"
+        android:layout_below="@id/ll_preview">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_edit_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="6dp"
+            android:text="Kembali"
+            android:background="@drawable/logout"
+            android:textColor="@color/white"
+            android:elevation="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_edit_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:text="Simpan"
+            android:background="@drawable/simpan"
+            android:textColor="@color/white"
+            android:elevation="8dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
